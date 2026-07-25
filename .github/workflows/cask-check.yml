@@ -1,0 +1,33 @@
+name: Cask Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  cask:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v7
+      - name: Audit and install the cask
+        shell: bash
+        run: |
+          set -euo pipefail
+          tap="gaofeng21cn/codex-tps"
+          appdir="$RUNNER_TEMP/codex-tps-applications"
+
+          brew tap --custom-remote "$tap" "$GITHUB_WORKSPACE"
+          if brew help trust >/dev/null 2>&1; then
+            brew trust "$tap"
+          fi
+          brew audit --cask --strict "$tap/codex-tps"
+          brew install --cask --appdir "$appdir" "$tap/codex-tps"
+
+          app="$appdir/Codex TPS.app"
+          test -d "$app"
+          codesign --verify --deep --strict "$app"
+          spctl --assess --type execute --verbose=4 "$app"
