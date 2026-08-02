@@ -1,4 +1,4 @@
-# Homebrew Tap for Codex TPS
+# Homebrew Tap for OPL Fleet Agent · Codex TPS
 
 Install the notarized universal macOS app with Homebrew:
 
@@ -6,6 +6,7 @@ Install the notarized universal macOS app with Homebrew:
 brew install --cask gaofeng21cn/codex-tps/codex-tps
 ```
 
-The Cask pins each release to its published SHA-256. It installs Codex TPS in
-the standard Applications directory and supports macOS 13 Ventura or later.
-Homebrew Cask distribution for Codex TPS
+The Cask name and installation identity remain `codex-tps` for compatibility.
+It pins each canonical OPL Fleet Agent release to its published SHA-256,
+installs Codex TPS in the standard Applications directory, and supports macOS
+13 Ventura or later.

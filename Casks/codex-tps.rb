@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 cask "codex-tps" do
-  version "0.2.3"
-  sha256 "bb785e0785aeecd0abbdd51f671bf6f4735e6f97567a598ff768d569375165e0"
+  version "0.2.29"
+  sha256 "6fff11e8ebc61523e3c0567f70a41ccaf4e27feedd22e45eca169f47f9946310"
 
-  url "https://github.com/gaofeng21cn/codex-tps/releases/download/v#{version}/Codex-TPS.dmg"
-  name "Codex TPS"
-  desc "Menu bar monitor for Codex token throughput"
-  homepage "https://github.com/gaofeng21cn/codex-tps"
+  url "https://github.com/gaofeng21cn/opl-fleet-agent/releases/download/v#{version}/Codex-TPS.dmg"
+  name "OPL Fleet Agent · Codex TPS"
+  desc "Local fleet agent and menu bar monitor for Codex throughput"
+  homepage "https://github.com/gaofeng21cn/opl-fleet-agent"
 
   livecheck do
     url :url
