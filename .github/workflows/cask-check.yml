@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   cask:
-    runs-on: macos-26
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v7
       - name: Audit and install the cask
