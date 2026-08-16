@@ -1,12 +1,14 @@
-# Homebrew Tap for OPL Fleet Agent · Codex TPS
+# Retired Homebrew Tap
 
-Install the notarized universal macOS app with Homebrew:
+This repository is retained as archived distribution history. It no longer
+contains a Homebrew cask or hosted cask workflow and must not be used as an
+installation or update source.
+
+Install OPL Fleet Agent directly from its canonical repository:
 
 ```bash
-brew install --cask gaofeng21cn/codex-tps/codex-tps
+curl -fsSL https://raw.githubusercontent.com/gaofeng21cn/opl-fleet-agent/main/scripts/install-release.sh | bash
 ```
 
-The Cask name and installation identity remain `codex-tps` for compatibility.
-It pins each canonical OPL Fleet Agent release to its published SHA-256,
-installs Codex TPS in the standard Applications directory, and supports macOS
-13 Ventura or later.
+Signed and notarized macOS artifacts are also available from the
+[OPL Fleet Agent releases](https://github.com/gaofeng21cn/opl-fleet-agent/releases/latest).
